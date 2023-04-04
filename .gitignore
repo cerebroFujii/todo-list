@@ -1,5 +1,10 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# 追加
+/.vscode/
+/.angular/
+/node_modules/
+
 # Compiled output
 /dist
 /tmp

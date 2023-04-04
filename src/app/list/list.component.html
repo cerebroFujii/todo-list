@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="d-flex">
+    <h2>タスク一覧</h2>
+  </div>
+  <div class="d-flex">
+    <ol class="list-style-none">
+      <li *ngFor="let todo of todoList | async" class="mb-1 d-flex justify-space-between" [id]="todo.id">
+        <span>{{todo.value}}</span>
+        <button class="ml-1" (click)="onClickCompletedButton(todo)"><span>完了</span></button>
+      </li>
+    </ol>
+  </div>
+  <div class="d-flex justify-content-end">
+    <input id='todo-input' placeholder="タスクフォーム" [formControl]="taskForm">
+    <button id='add-button' class="ml-1" (click)="onClickAddButton()">追加</button>
+  </div>
+</div>
